@@ -20,6 +20,7 @@ PATH="/Users/shruti/Documents/Softwares/htslib-1.3.1:${PATH}"
 bgzip -c UDN755592-SL146643.reheader.vcf > UDN755592-SL146643.reheader.vcf.gz
 
 # Tabix indexes a TAB-delimited genome position file in.tab.bgz and creates an index file ( in.tab.bgz.tbi or in.tab.bgz.csi ) when region is absent from the command-line. 
+# The input data file must be position sorted and compressed by bgzip 
 tabix -p vcf UDN755592-SL146643.reheader.vcf.gz
 tabix -h UDN755592-SL146643.reheader.vcf.gz 22 > UDN755592chr22.reheader.vcf.gz
 # now test that the new file has meta-data (-h from previous command) and only chromosome 22.
