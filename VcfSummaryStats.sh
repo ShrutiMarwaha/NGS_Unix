@@ -7,7 +7,7 @@ ls 633357-UDN676680-P_H72KKBCXX-1-ID04.INDELs_Annotated.vcf
 tabix -p vcf 633357-UDN676680-P_H72KKBCXX-1-ID04.INDELs_Annotated.vcf.gz
 
 # number of indels / snps
-bcftools stats  633357-UDN676680-P_H72KKBCXX-1-ID04.INDELs_Annotated.vcf.gz > UDN676680_INDELs.
+bcftools stats  633357-UDN676680-P_H72KKBCXX-1-ID04.INDELs_Annotated.vcf.gz > UDN676680_INDELs.txt
 
 # read depth 
 bcftools query -f 'DP:[ %DP]\n' 633357-UDN676680-P_H72KKBCXX-1-ID04.INDELs_Annotated.vcf.gz > UDN676680_INDELS_DP.txt
